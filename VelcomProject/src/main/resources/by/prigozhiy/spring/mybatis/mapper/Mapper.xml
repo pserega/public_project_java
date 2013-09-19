@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- Mapper.java namespace -->
+<mapper namespace="by.prigozhiy.spring.mybatis.mapper.Mapper">
+<!-- Person.java namespace -->
+    <resultMap type="by.prigozhiy.entity.Person" id="Person">
+        <!-- map table "person"column to class "Person" property -->
+        <id column="id" property="id"  />
+        <result property="name" column="name"/>   
+    </resultMap>
+    <sql id="userColumns">id, name</sql> 
+    <select id="selectAllPerson" resultMap="Person">
+        SELECT <include refid="userColumns"/> FROM person
+    </select>
+    
+     <insert id="insertPerson" parameterType="by.prigozhiy.entity.Person" timeout="10">
+		INSERT INTO person (name) VALUES (#{name})
+	</insert>
+</mapper>
