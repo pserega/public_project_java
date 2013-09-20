@@ -2,6 +2,7 @@ package by.prigozhiy.spring.mybatis.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
 import by.prigozhiy.entity.Person;
@@ -49,4 +50,7 @@ public interface Mapper {
 	 */
 	// @Insert("INSERT INTO person (name) VALUES (#{name})")
 	public int insertPerson(Person person);
+
+	@Insert("INSERT INTO person (name) VALUES (#{name})")
+	public int insertPersonM(Person person);
 }

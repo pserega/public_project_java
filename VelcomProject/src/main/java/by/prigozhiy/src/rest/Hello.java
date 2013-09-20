@@ -1,5 +1,7 @@
 package by.prigozhiy.src.rest;
 
+import java.util.List;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -9,7 +11,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import by.prigozhiy.entity.Person;
 import by.prigozhiy.entity.PersonUser;
+import by.prigozhiy.spring.mybatis.service.Service;
 
 /*
  * http://www.mkyong.com/webservices/jax-rs/jersey-hello-world-example/
@@ -18,6 +25,16 @@ import by.prigozhiy.entity.PersonUser;
  */
 @Path("/hello")
 public class Hello {
+
+	private Service service = null;
+
+	public Hello() {
+
+		ApplicationContext cxt = new ClassPathXmlApplicationContext(
+				"spring-config.xml");
+		service = (Service) cxt.getBean("service");
+	}
+
 	// This method is called if TEXT_PLAIN is request
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
@@ -41,13 +58,16 @@ public class Hello {
 	}
 
 	@GET
-	@Path("/json/get")
+	@Path("/json/get/{param}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public PersonUser getJSONLogin() {
-		PersonUser user = new PersonUser();
-		user.setLogin("i'm login");
-		user.setPassword("i'm password");
-		return user;
+	public Person getJSONLogin(@PathParam("param") int id) {
+
+		List<Person> persons = service.selectAllPerson();
+
+		// PersonUser user = new PersonUser();
+		// user.setLogin("i'm login");
+		// user.setPassword("i'm password");
+		return persons.get(id);
 	}
 
 	@POST
@@ -61,13 +81,46 @@ public class Hello {
 	}
 
 	@GET
-	@Path("/xml")
+	@Path("/xml/{par1}")
 	@Produces(MediaType.APPLICATION_XML)
-	public PersonUser getXMLLogin() {
-		PersonUser user = new PersonUser();
-		user.setLogin("i'm login");
-		user.setPassword("i'm password");
-		return user;
+	public Response getXMLLogin(@PathParam("par1") String id) {
+		try {
+			Integer idO = Integer.valueOf(id);
+
+			List<Person> persons = service.selectAllPerson();
+			Person person = persons.get(idO);
+
+			return Response.status(200).entity(person).build();
+
+		} catch (Exception e) {
+			return Response
+					.status(200)
+					.entity("<?xml version=\"1.0\"?>" + "<err>" + "ошибка :"
+							+ e.getMessage() + "</err>").build();
+		}
+
+	}
+
+	@GET
+	@Path("/xml/{par1}/{par2}")
+	@Produces(MediaType.APPLICATION_XML)
+	public Response getXMLLogin(@PathParam("par1") String id,
+			@PathParam("par2") String str) {
+		try {
+			Integer idO = Integer.valueOf(id);
+
+			List<Person> persons = service.selectAllPerson();
+			Person person = persons.get(idO);
+
+			return Response.status(200).entity(person).build();
+
+		} catch (Exception e) {
+			return Response
+					.status(200)
+					.entity("<?xml version=\"1.0\"?>" + "<err>" + "ошибка :"
+							+ e.getMessage() + str + "</err>").build();
+		}
+
 	}
 
 	@GET

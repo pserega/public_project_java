@@ -45,5 +45,16 @@ public class App {
 		System.out.println("-> " + persons.get(6).getId() + "\n");
 		System.out.println("-> " + persons.get(6).getName() + "\n");
 
+		System.out.println("service.insertPersonM(person)");
+		person.setName("Inserted personM");
+		service.insertPersonM(person);
+		System.out.println("-> insertedM..." + "\n");
+
+		System.out.println("List<Person> persons = service.selectAllPerson()");
+		persons = service.selectAllPerson();
+		System.out.println("-> " + persons + "\n");
+		System.out.println("-> " + persons.get(7).getId() + "\n");
+		System.out.println("-> " + persons.get(7).getName() + "\n");
+
 	}
 }

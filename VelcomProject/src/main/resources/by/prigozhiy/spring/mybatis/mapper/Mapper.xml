@@ -14,7 +14,7 @@
         SELECT <include refid="userColumns"/> FROM person
     </select>
     
-     <insert id="insertPerson" parameterType="by.prigozhiy.entity.Person" timeout="10">
+     <insert id="insertPerson" parameterType="by.prigozhiy.entity.Person" timeout="10" useGeneratedKeys="true">
 		INSERT INTO person (name) VALUES (#{name})
 	</insert>
 </mapper>

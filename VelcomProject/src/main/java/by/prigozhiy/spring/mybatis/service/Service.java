@@ -23,4 +23,9 @@ public class Service {
 	public int insertPerson(Person person) {
 		return mapper.insertPerson(person);
 	}
+
+	// @Transactional
+	public int insertPersonM(Person person) {
+		return mapper.insertPersonM(person);
+	}
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)--><ajsv>
+    <diagram creationDate="2013-сен-16 12:56" filterScript="" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" version="1.7.16.v20130804-1241">
+        <class className="by.prigozhiy.entity.Person" project="VelcomProject" xLocation="418" yLocation="-132"/>
+        <class className="by.prigozhiy.entity.PersonUser" project="VelcomProject" xLocation="49" yLocation="430"/>
+        <class className="by.prigozhiy.jdbc.OracleJDBC" project="VelcomProject" xLocation="68" yLocation="233"/>
+        <class className="by.prigozhiy.spring.mybatis.App" project="VelcomProject" xLocation="721" yLocation="-82"/>
+        <class className="by.prigozhiy.spring.mybatis.mapper.Mapper" project="VelcomProject" xLocation="305" yLocation="186"/>
+        <class className="by.prigozhiy.spring.mybatis.service.Service" project="VelcomProject" xLocation="598" yLocation="423"/>
+        <class className="by.prigozhiy.src.rest.Hello" project="VelcomProject" xLocation="930" yLocation="679"/>
+    </diagram>
+</ajsv>
