@@ -1,0 +1,1 @@
+INSERT INTO mp_tree (id,name,pathTree) VALUES (1,'registry','1')
