@@ -51,7 +51,7 @@ public class HomePageServletTest {
 
         homePage.doGet(request, response);
 
-        assertEquals("Hasta la vista!\n", stringWriter .toString());
+        assertEquals("Hasta la vista!", stringWriter .toString().trim());
         verify(accountServer, times(1)).removeUser();
     }
 }

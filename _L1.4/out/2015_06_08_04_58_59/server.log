@@ -1,0 +1,11 @@
+[06-08 04:59:00,036, 789] example.Main Starting at port: 82
+
+[06-08 04:59:00,187, 940] example.Main Server started
+[06-08 04:59:20,997, 21750] servlets.HomePageServlet Limit: 1. Count 0
+[06-08 04:59:20,997, 21750] servlets.HomePageServlet User pass
+[06-08 04:59:24,753, 25506] servlets.HomePageServlet Limit: 1. Count 1
+[06-08 04:59:24,754, 25507] servlets.HomePageServlet User were rejected
+[06-08 04:59:38,052, 38805] servlets.HomePageServlet Limit: 1. Count 1
+[06-08 04:59:38,052, 38805] servlets.HomePageServlet User were rejected
+[06-08 05:00:05,005, 65758] servlets.HomePageServlet Limit: 1. Count 0
+[06-08 05:00:05,005, 65758] servlets.HomePageServlet User pass
