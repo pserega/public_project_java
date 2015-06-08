@@ -1,0 +1,1 @@
+java -Dlog4j.configurationFile=cfg/log4j2.xml -agentlib:jdwp=transport=dt_socket,address=83,server=y,suspend=n -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=84 -Djava.rmi.server.hostname=46.101.129.161 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -classpath L1.4-1.0-jar-with-dependencies.jar:*.jar:. 82 &
