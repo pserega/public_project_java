@@ -10,7 +10,7 @@ import javax.management.NotCompliantMBeanException;
  */
 public interface AccountServerI {
     void addNewUser();
-
+    
     void removeUser();
 
     int getUsersLimit();

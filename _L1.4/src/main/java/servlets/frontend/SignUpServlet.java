@@ -1,6 +1,7 @@
 package servlets.frontend;
 
 import base.AccountService;
+import base.IAccountService;
 import base.UserProfile;
 import templater.PageGenerator;
 
@@ -16,14 +17,14 @@ import java.util.Map;
  * Created by v.chibrikov on 13.09.2014.
  */
 public class SignUpServlet extends HttpServlet {
-    private AccountService accountService;
+    private IAccountService accountService;
     private static final String signup = "/auth/signup";
 
     public static String getSignup() {
         return signup;
     }
     
-    public SignUpServlet(AccountService accountService) {
+    public SignUpServlet(IAccountService accountService) {
         this.accountService = accountService;
     }
 

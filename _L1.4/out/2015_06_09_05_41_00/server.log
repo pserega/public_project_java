@@ -1,0 +1,7 @@
+[06-09 05:41:01,044, 1041] Run Object JVM Beans (jconsol,visualVM) at port: 84
+[06-09 05:41:01,118, 1115] Run Starting at port: 82
+
+[06-09 05:41:01,311, 1308] Run Server started ... 
+[06-09 05:41:08,118, 8115] servlets.frontend.SignInServlet Signin name: test password: test Wrong login/password
+[06-09 05:41:12,576, 12573] servlets.frontend.SignInServlet Signin name: test password: test Wrong login/password
+[06-09 05:41:36,670, 36667] servlets.frontend.SignInServlet Signin name: test password: test Login passed

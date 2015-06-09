@@ -1,2 +1,3 @@
+curl http://prigozhiy.tk:82/admin?shutdown=10
 cd /root/lesson/L1.4/
 /opt/jdk1.7.0_79/bin/java -Dlog4j.configurationFile=cfg/log4j2.xml -agentlib:jdwp=transport=dt_socket,address=83,server=y,suspend=n -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=84 -Djava.rmi.server.hostname=46.101.129.161 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -classpath *.jar:. -jar L1.4-1.0-jar-with-dependencies.jar 82 &
