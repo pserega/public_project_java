@@ -1,0 +1,23 @@
+<registry>
+  <payment>
+    <id>18384</id>
+    <service>1122</service>
+    <name>Telecom</name>
+    <date>2015-02-18 12:33:43</date>
+    <account>112354845</account>
+    <sum>
+      <in>100</in>
+      <out>95</out>
+      <commission>5</commission>
+    </sum>
+    <comment/>
+    <status>0</status>
+    <payment>
+    </payment>
+  </payment>
+</registry>
+
+
+
+
+

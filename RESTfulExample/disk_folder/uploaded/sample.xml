@@ -1,0 +1,86 @@
+<registry>
+  <payment>
+    <id>18382</id>
+    <service>1122</service>
+    <name>Telecom</name>
+    <date>2015-02-18 12:33:43</date>
+    <account>112354845</account>
+    <sum>
+      <in>100</in>
+      <out>95</out>
+      <commission>5</commission>
+    </sum>
+    <comment/>
+    <status>0</status>
+    <payment>
+      <id>18383</id>
+      <service>1122</service>
+      <name>Telecom</name>
+      <date>2015-02-18 14:03:22</date>
+      <account>112321474</account>
+      <sum>
+        <in>50</in>
+        <out>45</out>
+        <commission>5</commission>
+      </sum>
+      <comment/>
+      <status>0</status>
+      <payment>
+        <id>18383</id>
+        <service>1122</service>
+        <name>Telecom</name>
+        <date>2015-02-18 14:03:22</date>
+        <account>112321474</account>
+        <sum>
+          <in>50</in>
+          <out>45</out>
+          <commission>5</commission>
+        </sum>
+        <comment/>
+        <status>0</status>
+      </payment>
+      <payment>
+        <id>18384</id>
+        <service>1122</service>
+        <name>Telecom</name>
+        <date>2015-02-18 16:55:30</date>
+        <account>112365885</account>
+        <sum>
+          <in>150</in>
+          <out>145</out>
+          <commission>5</commission>
+        </sum>
+        <comment/>
+        <status>0</status>
+      </payment>
+      <payment>
+        <id>18383</id>
+        <service>1122</service>
+        <name>Telecom</name>
+        <date>2015-02-18 14:03:22</date>
+        <account>112321474</account>
+        <sum>
+          <in>50</in>
+          <out>45</out>
+          <commission>5</commission>
+        </sum>
+        <comment/>
+        <status>0</status>
+      </payment>
+      <payment>
+        <id>18384</id>
+        <service>1122</service>
+        <name>Telecom</name>
+        <date>2015-02-18 16:55:30</date>
+        <account>112365885</account>
+        <sum>
+          <in>150</in>
+          <out>145</out>
+          <commission>5</commission>
+        </sum>
+        <comment/>
+        <status>0</status>
+      </payment>
+    </payment>
+  </payment>
+</registry>

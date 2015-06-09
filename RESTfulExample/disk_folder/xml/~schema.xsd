@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" elementFormDefault="qualified">
+  <xs:element name="registry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="payment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="payment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="service"/>
+        <xs:element ref="name"/>
+        <xs:element ref="date"/>
+        <xs:element ref="account"/>
+        <xs:element ref="sum"/>
+        <xs:element ref="comment"/>
+        <xs:element ref="status"/>
+        <xs:element ref="payment" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="service" type="xs:string"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="date" type="xs:string"/>
+  <xs:element name="account" type="xs:string"/>
+  <xs:element name="sum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="in"/>
+        <xs:element ref="out"/>
+        <xs:element ref="commission"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="in" type="xs:string"/>
+  <xs:element name="out" type="xs:string"/>
+  <xs:element name="commission" type="xs:string"/>
+  <xs:element name="comment">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="status" type="xs:string"/>
+</xs:schema>

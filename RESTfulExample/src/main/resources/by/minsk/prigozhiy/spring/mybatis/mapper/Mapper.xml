@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- Mapper.java namespace -->
+<mapper namespace="by.minsk.prigozhiy.spring.mybatis.mapper.Mapper">
+
+    <!-- map table "Payment" column to class "PaymentDB" property -->
+    <resultMap type="by.minsk.prigozhiy.entity.db.PaymentDB" id="Payment">
+        <id column="pathTree" property="path"  />
+        <result property="name" column="name"/>   
+        <result property="account" column="account"/>   
+    </resultMap>
+    
+    <select id="selectAllPayment" resultMap="Payment">
+        SELECT pathTree,account,name FROM Payment
+    </select>
+    
+    <insert id="insertPayment" parameterType="by.minsk.prigozhiy.entity.db.PaymentDB" timeout="10">
+	INSERT INTO Payment (pathTree,account,name) VALUES (#{path},#{account},#{name})
+    </insert>
+    
+     <select id="selectPayment" resultMap="Payment">
+        SELECT pathTree,account,name FROM Payment WHERE pathTree like #{pathTree}
+    </select>
+        
+    <!-- map table "tb_Sum" column to class "SumDB" property -->
+    <resultMap type="by.minsk.prigozhiy.entity.db.SumDB" id="Sum">
+        <id column="pathTree" property="path"  />
+        <result property="in" column="fin"/>   
+        <result property="out" column="fout"/>  
+        <result property="commission" column="commission"/>  
+    </resultMap>
+    
+    <select id="selectAllSum" resultMap="Sum">
+        SELECT pathTree,fin,fout,commission FROM tb_sum
+    </select>
+    
+    <insert id="insertSum" parameterType="by.minsk.prigozhiy.entity.db.SumDB" timeout="10">
+	INSERT INTO tb_sum (pathTree,fin,fout,commission) VALUES (#{path},#{in},#{out},#{commission})
+    </insert>
+    
+    <!-- map table "mpTree" column to class "MapTreeDb" property -->
+    <resultMap type="by.minsk.prigozhiy.entity.db.MapTreeDB" id="MapTree">
+        <id column="id" property="id"  />
+        <result property="name" column="name"/>   
+        <result property="pathTree" column="path"/>  
+    </resultMap>
+    
+    <select id="selectAllMapTree" resultMap="MapTree">
+        SELECT id,name,pathTree FROM mp_tree
+    </select>
+    
+    <insert id="insertMapTree" parameterType="by.minsk.prigozhiy.entity.db.MapTreeDB" timeout="10">
+	INSERT INTO mp_tree (id,name,pathTree) VALUES (#{id},#{name},#{path})
+    </insert>
+    
+</mapper>

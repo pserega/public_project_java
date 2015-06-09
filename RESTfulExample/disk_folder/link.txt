@@ -1,0 +1,15 @@
+http://habrahabr.ru/post/83860/
+http://thoughtforge.net/610/marshalling-xml-with-spring-ws-and-jaxb/
+http://www.mkyong.com/spring-mvc/spring-3-mvc-and-xml-example/
+http://www.mkyong.com/webservices/jax-rs/jersey-spring-integration-example/
+http://www.mkyong.com/spring3/spring-objectxml-mapping-example/
+
+http://www.javacodegeeks.com/2014/05/generate-your-jaxb-classes-in-a-second-with-xjc.html
+http://devcolibri.com/3732
+https://netbeans.org/kb/docs/websvc/rest_ru.html
+http://howtodoinjava.com/2015/02/20/spring-rest-hello-world-xml-example/
+
+http://www.mkyong.com/tutorials/jax-rs-tutorials/
+http://www.mkyong.com/webservices/jax-rs/file-upload-example-in-jersey/
+
+http://habrahabr.ru/post/252237/
