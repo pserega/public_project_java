@@ -30,6 +30,8 @@ public class HomePageServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
 
         String remove = request.getParameter("remove");
+        
+        String login = request.getParameter("login");
 
         if (remove != null) {
             accountServer.removeUser();
@@ -46,7 +48,7 @@ public class HomePageServlet extends HttpServlet {
         if (limit > count) {
             logger.info("User pass");
             accountServer.addNewUser();
-            response.getWriter().println("Hello, world!");
+            response.getWriter().println(String.format("Login {%s} Limit: {%s}. Count {%s}",login,  limit, count));
             response.setStatus(HttpServletResponse.SC_OK);
         }
         else {

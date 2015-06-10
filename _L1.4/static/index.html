@@ -1,22 +1,24 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml" content="text/html;">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Индекс</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <script src="/js/lib/jquery.js"></script>
-    <script src="/js/tmpl/main.js"></script>
-    <script src="/js/tmpl/scoreboard.js"></script>
-    <script src="/js/tmpl/game.js"></script>
-    <script src="/js/tmpl/login.js"></script>
+	<title>Авторизация</title>
 </head>
 <body>
-<a href="home">Page</a>
-
-<div id="page"></div>
-    <script>
-        var $page = $('#page');
-        showMainScreen();
-    </script>
-
-<br/>
-<img src="jetty-logo-80x22.png"/>
+	<form action = "/auth/signin" method = "GET">
+	Логин: <input type="text" name="name" />
+	Пароль: <input type="password" name="password" />
+	<input type="submit" value="Авторизироваться">
+	</form>
+	
+	<form action = "/auth/signout" method = "GET">
+	Логин: <input type="text" name="name" />
+	<input type="submit" value="Выйти">
+	</form>
+	
+	<form action = "/auth/signup" method = "GET">
+	Логин: <input type="text" name="name" />
+	Пароль: <input type="password" name="password" />
+	<input type="submit" value="Зарегистрироваться">
+	</form>
+	
 </body>
+</html>

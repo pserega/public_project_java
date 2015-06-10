@@ -13,6 +13,8 @@ public interface IAccountService {
     
     public boolean addUser(String userName, UserProfile userProfile);
     
+    public boolean removeUser(String userName);
+    
     public void addSessions(String sessionId, UserProfile userProfile);
     
     public UserProfile getUser(String userName);

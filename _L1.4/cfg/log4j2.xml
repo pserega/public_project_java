@@ -13,7 +13,7 @@
                 <pattern>[%d{MM-dd HH:mm:ss,SSS}, %r] %c %m%n</pattern>
             </PatternLayout>
             <Policies>
-                <SizeBasedTriggeringPolicy size="50MB"/>
+                <SizeBasedTriggeringPolicy size="100MB"/>
             </Policies>
             <DefaultRolloverStrategy max="20"/>
         </RollingFile>

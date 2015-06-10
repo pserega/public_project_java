@@ -30,4 +30,10 @@ public class AccountService implements IAccountService {
     public UserProfile getSessions(String sessionId) {
         return sessions.get(sessionId);
     }
+
+	@Override
+	public boolean removeUser(String userName) {
+		users.remove(userName);
+		return true;
+	}
 }

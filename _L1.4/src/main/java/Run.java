@@ -4,6 +4,7 @@ import base.AccountService;
 import base.IAccountService;
 import servlets.admin.AdminPageServlet;
 import servlets.frontend.SignInServlet;
+import servlets.frontend.SignOutServlet;
 import servlets.frontend.SignUpServlet;
 import servlets.home.HomePageServlet;
 
@@ -31,7 +32,7 @@ public class Run {
         int port = Integer.valueOf(args[0]);
         
         //Object JVM Beans (jconsol)
-        AccountServerI accountServer = new AccountServer(1);
+        AccountServerI accountServer = new AccountServer(10);
         accountServer.registerMBean();
         
         logger.info("Listening for transport dt_socket at address: 83");
@@ -50,6 +51,7 @@ public class Run {
         IAccountService accountServiceLogin = new AccountService();
         context.addServlet(new ServletHolder(new SignInServlet(accountServiceLogin)), SignInServlet.getSignin());
         context.addServlet(new ServletHolder(new SignUpServlet(accountServiceLogin)), SignUpServlet.getSignup());
+        context.addServlet(new ServletHolder(new SignOutServlet(accountServiceLogin)), SignOutServlet.getSignout());
 
         //http static url
         ResourceHandler resource_handler = new ResourceHandler();
